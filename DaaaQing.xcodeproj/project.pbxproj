@@ -21,6 +21,8 @@
 		6C06EB6A1F9998DE00D27D1E /* GSBirthdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C06EB691F9998DE00D27D1E /* GSBirthdayView.m */; };
 		6C06EB6E1F999F1000D27D1E /* GSBasePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C06EB6D1F999F1000D27D1E /* GSBasePopView.m */; };
 		6C06EB9C1FA1B13500D27D1E /* GSCollectionViewCascadeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C06EB9B1FA1B13500D27D1E /* GSCollectionViewCascadeLayout.m */; };
+		6C2803B71FB30CED0023F062 /* GSDiaryDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2803B61FB30CED0023F062 /* GSDiaryDetailController.m */; };
+		6C2803BB1FB30E650023F062 /* GSCollectionViewScaleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2803BA1FB30E650023F062 /* GSCollectionViewScaleLayout.m */; };
 		6C5272FB1FB1596B007A4473 /* GSBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5272FA1FB1596B007A4473 /* GSBaseTableViewController.m */; };
 		6C5272FE1FB1601F007A4473 /* GSDiaryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5272FD1FB1601F007A4473 /* GSDiaryController.m */; };
 		6C5273011FB180F0007A4473 /* birthday.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6C5273001FB180F0007A4473 /* birthday.jpeg */; };
@@ -68,6 +70,10 @@
 		6C06EB831FA08D2700D27D1E /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		6C06EB9A1FA1B13500D27D1E /* GSCollectionViewCascadeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewCascadeLayout.h; sourceTree = "<group>"; };
 		6C06EB9B1FA1B13500D27D1E /* GSCollectionViewCascadeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewCascadeLayout.m; sourceTree = "<group>"; };
+		6C2803B51FB30CED0023F062 /* GSDiaryDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDiaryDetailController.h; sourceTree = "<group>"; };
+		6C2803B61FB30CED0023F062 /* GSDiaryDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDiaryDetailController.m; sourceTree = "<group>"; };
+		6C2803B91FB30E650023F062 /* GSCollectionViewScaleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewScaleLayout.h; sourceTree = "<group>"; };
+		6C2803BA1FB30E650023F062 /* GSCollectionViewScaleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewScaleLayout.m; sourceTree = "<group>"; };
 		6C5272F91FB1596B007A4473 /* GSBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseTableViewController.h; sourceTree = "<group>"; };
 		6C5272FA1FB1596B007A4473 /* GSBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBaseTableViewController.m; sourceTree = "<group>"; };
 		6C5272FC1FB1601F007A4473 /* GSDiaryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDiaryController.h; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 				6C603D821FA6F77700286D87 /* GSFireViewController.m */,
 				6C5272FC1FB1601F007A4473 /* GSDiaryController.h */,
 				6C5272FD1FB1601F007A4473 /* GSDiaryController.m */,
+				6C2803B51FB30CED0023F062 /* GSDiaryDetailController.h */,
+				6C2803B61FB30CED0023F062 /* GSDiaryDetailController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 		6C06EB981FA1B12700D27D1E /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				6C2803B81FB30E310023F062 /* Scale */,
 				6C06EB991FA1B12700D27D1E /* Cascade */,
 			);
 			path = Layout;
@@ -304,6 +313,15 @@
 				6C06EB9B1FA1B13500D27D1E /* GSCollectionViewCascadeLayout.m */,
 			);
 			path = Cascade;
+			sourceTree = "<group>";
+		};
+		6C2803B81FB30E310023F062 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				6C2803B91FB30E650023F062 /* GSCollectionViewScaleLayout.h */,
+				6C2803BA1FB30E650023F062 /* GSCollectionViewScaleLayout.m */,
+			);
+			path = Scale;
 			sourceTree = "<group>";
 		};
 		6C5272FF1FB180DE007A4473 /* ImageSource */ = {
@@ -535,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2803BB1FB30E650023F062 /* GSCollectionViewScaleLayout.m in Sources */,
 				6C7CFA371F96F60000C4163F /* AppDelegate.m in Sources */,
 				6C06EB6A1F9998DE00D27D1E /* GSBirthdayView.m in Sources */,
 				6C603D831FA6F77700286D87 /* GSFireViewController.m in Sources */,
@@ -549,6 +568,7 @@
 				6C5272FE1FB1601F007A4473 /* GSDiaryController.m in Sources */,
 				6C6B3EA41FA9C2E10037C1D2 /* GSCakeLayer.m in Sources */,
 				6C06EB481F98476600D27D1E /* UIViewController+GSNavigationExtension.m in Sources */,
+				6C2803B71FB30CED0023F062 /* GSDiaryDetailController.m in Sources */,
 				6C6B3EB41FAB018D0037C1D2 /* GSTextLayer.m in Sources */,
 				6C06EB5C1F98521100D27D1E /* UIColor+extension.m in Sources */,
 				6C06EB501F984BD000D27D1E /* GSHomeViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "GSDiaryController.h"
+#import "GSDiaryDetailController.h"
 
 @interface GSDiaryController ()
 
@@ -62,6 +63,15 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - UITbaleViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GSDiaryDetailController *vc = [[GSDiaryDetailController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

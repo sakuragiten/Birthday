@@ -39,15 +39,15 @@
     [self.view addSubview:testBtn];
     
 //    
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 200, 300, 300)];
-//    
-//    UIImage *image = [[GSTool sharedTool] qrCoderWithContent:@"<html><body><h1>我的第一个标题</h1><p>我的第一个段落。</p></body></html>"];
-//    
-//    imageView.image = image;
-//    
-//    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-//    
-//    [self.view addSubview:imageView];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 200, 300, 300)];
+    
+    UIImage *image = [[GSTool sharedTool] qrCoderWithContent:@"201709250047$421127001008GB00665F00010089$鄂(2017)黄梅不动产权第0009713号$F70034CB5FF56F63C3A8D9C1"];
+    
+    imageView.image = image;
+    
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    
+    [self.view addSubview:imageView];
 //
     
 }
