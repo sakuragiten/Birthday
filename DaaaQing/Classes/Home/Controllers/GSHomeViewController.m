@@ -39,15 +39,6 @@
     [self.view addSubview:testBtn];
     
 //    
-//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 200, 300, 300)];
-//    
-//    UIImage *image = [[GSTool sharedTool] qrCoderWithContent:@"<html><body><h1>我的第一个标题</h1><p>我的第一个段落。</p></body></html>"];
-//    
-//    imageView.image = image;
-//    
-//    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-//    
-//    [self.view addSubview:imageView];
 //
     
 }
