@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				6C06EB3A1F98451C00D27D1E /* Controllers */,
-				6C06EB3B1F98451C00D27D1E /* Models */,
+				6CD4B4481FB5453B0000C5D6 /* Models */,
 				6C06EB3C1F98451C00D27D1E /* Views */,
 			);
 			path = Home;
@@ -181,13 +181,6 @@
 				6C2803B61FB30CED0023F062 /* GSDiaryDetailController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		6C06EB3B1F98451C00D27D1E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		6C06EB3C1F98451C00D27D1E /* Views */ = {
@@ -418,6 +411,13 @@
 				6C06EB831FA08D2700D27D1E /* Singleton.h */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6CD4B4481FB5453B0000C5D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
