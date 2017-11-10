@@ -62,7 +62,7 @@ SingletonImplementation(AudioTool)
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         player.delegate = self;
         
-        if (isLoop) player.numberOfLoops = -1;
+        if (isLoop) player.numberOfLoops = 2;
         
         if (![player prepareToPlay]) return NO; //是否可以播放
         

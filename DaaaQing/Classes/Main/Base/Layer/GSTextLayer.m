@@ -24,7 +24,7 @@
         self.text = text;
         self.frame = rect;
         self.animationTime = kAnimationTime * 4; //默认
-        self.font = [UIFont systemFontOfSize:40]; //默认
+        self.font = [UIFont fontWithName:kCoolFontName size:40]; //默认
         self.backgroundColor = [UIColor clearColor].CGColor;
         [self drawTextWithAnimation];
     }

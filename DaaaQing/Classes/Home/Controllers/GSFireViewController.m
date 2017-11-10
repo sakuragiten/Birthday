@@ -160,7 +160,7 @@
     if (!_nameLayer) {
         CGFloat width = 100;
         CGRect rect = CGRectMake((SCREEN_WIDTH - width) * 0.5, 100, width, 60);
-        _nameLayer = [GSTextLayer layerWithText:@"天 天" rect:rect];
+        _nameLayer = [GSTextLayer layerWithText:@"十八岁" rect:rect];
     }
     return _nameLayer;
 }

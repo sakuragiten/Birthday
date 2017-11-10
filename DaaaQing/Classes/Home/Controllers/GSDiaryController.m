@@ -8,6 +8,7 @@
 
 #import "GSDiaryController.h"
 #import "GSDiaryDetailController.h"
+#import "GSFireViewController.h"
 
 @interface GSDiaryController ()
 
@@ -40,6 +41,8 @@
     
     [self settingNavigationView];
     
+  
+    
 }
 - (void)settingNavigationView
 {
@@ -64,13 +67,42 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - UItableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = @[@"Memories for you.", @"Code for you.", @"Words for you.", @"Everything for you."][indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:kCoolFontName size:16];
+    cell.backgroundColor = [UIColor whiteColor];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
 #pragma mark - UITbaleViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GSDiaryDetailController *vc = [[GSDiaryDetailController alloc] init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == 0) {
+        GSDiaryDetailController *vc = [[GSDiaryDetailController alloc] init];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.row == 1) {
+        GSFireViewController *vc = [[GSFireViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
+
+
 
 
 #pragma mark - UIScrollViewDelegate

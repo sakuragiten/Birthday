@@ -76,4 +76,7 @@
 /** color */
 #define kBgColor   (RGB(239,239,244))
 
+/** fontName */
+#define kCoolFontName @"BradleyHandITCTT-Bold"
+
 #endif /* MacroDefinition_h */

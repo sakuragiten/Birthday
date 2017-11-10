@@ -144,7 +144,20 @@ static NSString *const kAnimationTypeShowText = @"showTextAnimation";
     
     {
         NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"Shawna"];
-        one.yy_font = [UIFont boldSystemFontOfSize:26];
+        one.yy_font = [UIFont boldSystemFontOfSize:20];
+        one.yy_color = [UIColor whiteColor];
+        YYTextShadow *shadow = [YYTextShadow new];
+        shadow.color = [UIColor colorWithWhite:0.000 alpha:0.490];
+        shadow.offset = CGSizeMake(0, 1);
+        shadow.radius = 5;
+        one.yy_textShadow = shadow;
+        [text appendAttributedString:one];
+        [text appendAttributedString:[self padding]];
+    }
+    
+    {
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"Here is your gift."];
+        one.yy_font = [UIFont boldSystemFontOfSize:20];
         one.yy_color = [UIColor whiteColor];
         YYTextShadow *shadow = [YYTextShadow new];
         shadow.color = [UIColor colorWithWhite:0.000 alpha:0.490];
@@ -209,6 +222,41 @@ static NSString *const kAnimationTypeShowText = @"showTextAnimation";
         [one yy_setTextHighlight:highlight range:one.yy_rangeOfAll];
         
         [text appendAttributedString:one];
+        
+        [text appendAttributedString:[self padding]];
+        [text appendAttributedString:[self padding]];
+        [text appendAttributedString:[self padding]];
+    }
+    
+    {
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"DaaaQing"];
+        one.yy_font = [UIFont boldSystemFontOfSize:16];
+        one.yy_color = [UIColor redColor];
+        
+        YYTextBorder *border = [YYTextBorder new];
+        border.cornerRadius = 50;
+        border.insets = UIEdgeInsetsMake(0, -10, 0, -10);
+        border.strokeWidth = 0.5;
+        border.strokeColor = one.yy_color;
+        border.lineStyle = YYTextLineStyleSingle;
+        one.yy_textBackgroundBorder = border;
+        
+        YYTextBorder *highlightBorder = border.copy;
+        highlightBorder.strokeWidth = 0;
+        highlightBorder.strokeColor = one.yy_color;
+        highlightBorder.fillColor = one.yy_color;
+        
+        YYTextHighlight *highlight = [YYTextHighlight new];
+        [highlight setColor:[UIColor whiteColor]];
+        [highlight setBackgroundBorder:highlightBorder];
+        GSWeakSelf(weakSelf)
+        highlight.tapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
+            [weakSelf hideAnimated];
+        };
+        [one yy_setTextHighlight:highlight range:one.yy_rangeOfAll];
+        
+        [text appendAttributedString:one];
+        [text appendAttributedString:[self padding]];
     }
     
     
@@ -406,6 +454,8 @@ static NSString *const kAnimationTypeShowText = @"showTextAnimation";
     _textLabel.alpha = 0;
     _textLabel.attributedText = [self attributeTextAtLast];
     _textLabel.textAlignment = NSTextAlignmentCenter;
+    
+    //5秒以后 可以点击屏幕 隐藏礼物弹窗
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.outsideEnable = YES;
     });
