@@ -7,12 +7,19 @@
 //
 
 #import "GSTool.h"
+@interface GSTool ()
 
+
+
+@end
 @implementation GSTool
 
 SingletonImplementation(Tool)
 
 
+
+
+#pragma mark - 二维码
 - (UIImage *)qrCoderWithContent:(NSString *)string
 {
     // 1. 创建一个二维码滤镜实例(CIFilter)
@@ -22,7 +29,7 @@ SingletonImplementation(Tool)
     
     // 2. 给滤镜添加数据
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"birthday.jpeg"]);
+    //    NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"birthday.jpeg"]);
     // 使用KVC的方式给filter赋值
     [filter setValue:data forKeyPath:@"inputMessage"];
     
@@ -33,6 +40,8 @@ SingletonImplementation(Tool)
     
     return [self createNonInterpolatedUIImageFormCIImage:image withSize:2000];
 }
+
+
 
 - (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat) size {
     
@@ -57,6 +66,46 @@ SingletonImplementation(Tool)
     return [UIImage imageWithCGImage:scaledImage];
 }
 
+#pragma mark - 摇一摇切换环境 写在控制器里
+//- (void)shakeToChangeEnvironmentEnable:(BOOL)enable
+//{
+//    //设置摇一摇功能
+//    [UIApplication sharedApplication].applicationSupportsShakeToEdit = enable;
+//
+//    //并让自己成为第一响应者
+//    [self becomeFirstResponder];
+//}
+
+//开始摇动
+//- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+//{
+//    if (_aletShow) return; //弹窗已经弹出
+//    _aletShow = YES;
+//    NSNumber *environment = [[NSUserDefaults standardUserDefaults] objectForKey:@"userEnvironment"];
+//    NSArray *environmentArray = @[@"测试环境",@"开发环境",@"灰度环境",@"正式环境"];
+//    NSString *currentEnvironment = environmentArray[environment.integerValue];
+//    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"当前环境:%@", currentEnvironment] message:@"切换不同环境需要重新登录哦😀" preferredStyle:UIAlertControllerStyleAlert];
+//    for (int i = 0; i < environmentArray.count; i++) {
+//        NSString *e = environmentArray[i];
+//        if (i == environment.integerValue) {
+//            e = [e stringByAppendingString:@"(当前)"];
+//        }
+//        UIAlertAction *action = [UIAlertAction actionWithTitle:e style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            _aletShow = NO;
+//            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:i] forKey:@"userEnvironment"];
+//            [alertVC addAction:action];
+//        }];
+//    }
+//
+//    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//        _aletShow = NO;
+//    }];
+//
+//    [alertVC addAction:cancel];
+//
+//    [self presentViewController:alertVC animated:YES completion:nil];
+//
+//}
 
 
 

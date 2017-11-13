@@ -38,6 +38,7 @@
 		6C7CFA371F96F60000C4163F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7CFA361F96F60000C4163F /* AppDelegate.m */; };
 		6C7CFA3F1F96F60000C4163F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7CFA3E1F96F60000C4163F /* Assets.xcassets */; };
 		6C7CFA421F96F60000C4163F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7CFA401F96F60000C4163F /* LaunchScreen.storyboard */; };
+		6CD4B4701FB9735B0000C5D6 /* UIView+GSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD4B46E1FB9735B0000C5D6 /* UIView+GSAdd.m */; };
 		87615AFE1C20CF4F1E93908E /* libPods-DaaaQing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3377AAC0C10CD23ABCC5318 /* libPods-DaaaQing.a */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,8 @@
 		6C7CFA3E1F96F60000C4163F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		6C7CFA411F96F60000C4163F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C7CFA431F96F60000C4163F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		6CD4B46E1FB9735B0000C5D6 /* UIView+GSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GSAdd.m"; sourceTree = "<group>"; };
+		6CD4B46F1FB9735B0000C5D6 /* UIView+GSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GSAdd.h"; sourceTree = "<group>"; };
 		9B88E273FDDAB2C613147563 /* Pods-DaaaQing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaaaQing.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaaaQing/Pods-DaaaQing.release.xcconfig"; sourceTree = "<group>"; };
 		B3377AAC0C10CD23ABCC5318 /* libPods-DaaaQing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DaaaQing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D696F8B7F03CB4D36D141075 /* Pods-DaaaQing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaaaQing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaaaQing/Pods-DaaaQing.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 			children = (
 				6C06EB5A1F98521100D27D1E /* UIColor+extension.h */,
 				6C06EB5B1F98521100D27D1E /* UIColor+extension.m */,
+				6CD4B46F1FB9735B0000C5D6 /* UIView+GSAdd.h */,
+				6CD4B46E1FB9735B0000C5D6 /* UIView+GSAdd.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD4B4701FB9735B0000C5D6 /* UIView+GSAdd.m in Sources */,
 				6C2803BB1FB30E650023F062 /* GSCollectionViewScaleLayout.m in Sources */,
 				6C7CFA371F96F60000C4163F /* AppDelegate.m in Sources */,
 				6C06EB6A1F9998DE00D27D1E /* GSBirthdayView.m in Sources */,

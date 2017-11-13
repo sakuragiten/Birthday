@@ -45,12 +45,14 @@
 
 #pragma mark - categories
 #import "UIColor+extension.h"
-
+#import "UIView+GSAdd.h"
 
 #pragma mark - Third part
-#import <UIView+YYAdd.h>
-#import <CALayer+YYAdd.h>
+//#import <UIView+YYAdd.h>
+//#import <CALayer+YYAdd.h>
 #import <YYText.h>
+#import <YYCategories.h>
 #import <Masonry.h>
+
 
 #endif /* daqing_pch */

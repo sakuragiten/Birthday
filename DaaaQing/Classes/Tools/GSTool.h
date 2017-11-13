@@ -15,4 +15,6 @@ SingletonInterface(Tool)
 
 - (UIImage *)qrCoderWithContent:(NSString *)string;
 
+//- (void)shakeToChangeEnvironmentEnable:(BOOL)enable;
+
 @end
