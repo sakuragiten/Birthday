@@ -56,6 +56,6 @@
 #import <YYText.h>
 #import <YYCategories.h>
 #import <Masonry.h>
-
+#import <YYImage.h>
 
 #endif /* daqing_pch */
