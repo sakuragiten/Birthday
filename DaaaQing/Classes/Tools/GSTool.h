@@ -15,6 +15,10 @@ SingletonInterface(Tool)
 
 - (UIImage *)qrCoderWithContent:(NSString *)string;
 
+
 - (void)printSystemFontsName;
+
+//- (void)shakeToChangeEnvironmentEnable:(BOOL)enable;
+
 
 @end

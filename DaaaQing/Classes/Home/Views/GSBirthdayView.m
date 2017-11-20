@@ -54,7 +54,7 @@
 @end
 
 //内敛函数
-static inline CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;}
+static inline CGFloat BirthDegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;}
 
 
 static NSTimeInterval const kAnimationDuriation = 1.0f;
@@ -463,7 +463,7 @@ static NSString *const kAnimationTypeShowText = @"showTextAnimation";
     
     NSMutableArray *values = [NSMutableArray array];
     for (NSInteger i = 1; i < 40; i++) {
-        [values addObject:@(DegreesToRadians(-i))];
+        [values addObject:@(BirthDegreesToRadians(-i))];
     }
     
     //路径 移动
@@ -507,30 +507,30 @@ static NSString *const kAnimationTypeShowText = @"showTextAnimation";
     for (NSInteger i = 1; i < 35; i++) {
         if (i < 30) {
             [strokePath addArcWithCenter:CGPointMake(centerX - i * 0.5, centerY - i / 15.0) radius:radius
-                              startAngle:DegreesToRadians(-90-(i-1))
-                                endAngle:DegreesToRadians(-90-i) clockwise:NO];
+                              startAngle:BirthDegreesToRadians(-90-(i-1))
+                                endAngle:BirthDegreesToRadians(-90-i) clockwise:NO];
         } else {
             [strokePath addArcWithCenter:CGPointMake(centerX - (0.5 * i), centerY - 2 + (i - 30) / 2.5)
                                   radius:radius
-                              startAngle:DegreesToRadians(-90-(i-1))
-                                endAngle:DegreesToRadians(-90-i) clockwise:NO];
+                              startAngle:BirthDegreesToRadians(-90-(i-1))
+                                endAngle:BirthDegreesToRadians(-90-i) clockwise:NO];
         }
     }
     for (NSInteger i = 1; i < 17; i++) {
         [strokePath addArcWithCenter:CGPointMake(centerX - 17 + (i - 1 )/ 5.0, centerY + i / 4.0) radius:radius
-                          startAngle:DegreesToRadians(-124-(i-1))
-                            endAngle:DegreesToRadians(-124-i) clockwise:NO];
+                          startAngle:BirthDegreesToRadians(-124-(i-1))
+                            endAngle:BirthDegreesToRadians(-124-i) clockwise:NO];
     }
     for (NSInteger i = 1; i < 5; i++) {
         [strokePath addArcWithCenter:CGPointMake(centerX - 14 - i / 8.0 , centerY + 4 + i / 2.0) radius:radius
-                          startAngle:DegreesToRadians(-140 + (i-1))
-                            endAngle:DegreesToRadians(-140 + i) clockwise:YES];
+                          startAngle:BirthDegreesToRadians(-140 + (i-1))
+                            endAngle:BirthDegreesToRadians(-140 + i) clockwise:YES];
     }
     for (NSInteger i = 0; i < 6; i++) {
         [strokePath addArcWithCenter:CGPointMake(centerX - 15 - i, centerY + 6 + i)
                               radius:radius -  3
-                          startAngle:DegreesToRadians(-140-(i-1))
-                            endAngle:DegreesToRadians(-140-i) clockwise:NO];
+                          startAngle:BirthDegreesToRadians(-140-(i-1))
+                            endAngle:BirthDegreesToRadians(-140-i) clockwise:NO];
     }
     
     
