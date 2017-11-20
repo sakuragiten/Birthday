@@ -20,12 +20,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self showBirthdayView];
+    [self showBirthdayView];
     [self setupUI];
+    
+   
+
     
 //    self.view.backgroundColor = [UIColor randomColor];
 
-//    [[GSAudioTool sharedAudioTool] playBirthSong];
+    [[GSAudioTool sharedAudioTool] playBirthSong];
 //    [self showBirthdayView];
     
     
@@ -56,7 +59,7 @@
 
 - (void)setupUI
 {
-    self.title = @"DaQqqqqq";
+    self.title = @"Love U";
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     imageView.image = [UIImage imageNamed:@"da_bg.jpg"];
@@ -79,9 +82,9 @@
     NSMutableAttributedString *text = [NSMutableAttributedString new];
     
     {
-        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"Hello World! "];
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"wonderful time with you! "];
         one.yy_font = [UIFont boldSystemFontOfSize:14];
-        one.yy_color = [UIColor whiteColor];
+        one.yy_color = RGBAlpha(255, 255, 255, 0.5);
         YYTextShadow *shadow = [YYTextShadow new];
         shadow.color = [UIColor colorWithWhite:0.000 alpha:0.490];
         shadow.offset = CGSizeMake(0, 1);
@@ -92,23 +95,23 @@
     }
     
     {
-        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"Hello My Girl!"];
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"and"];
         one.yy_font = [UIFont boldSystemFontOfSize:14];
-        one.yy_color = [UIColor whiteColor];
+        one.yy_color = RGBAlpha(255, 255, 255, 0.5);
         YYTextShadow *shadow = [YYTextShadow new];
         shadow.color = [UIColor colorWithWhite:0.000 alpha:0.490];
         shadow.offset = CGSizeMake(0, 1);
         shadow.radius = 5;
         one.yy_textShadow = shadow;
         [text appendAttributedString:one];
-        [text appendAttributedString:[self padding]];
+//        [text appendAttributedString:[self padding]];
     }
-    
     {
         
-        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"if i were you , i would click here!"];
-        one.yy_font = [UIFont boldSystemFontOfSize:14];
-        one.yy_color = [UIColor whiteColor];
+        //        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"if i were you , i would click here!"];
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@" love "];
+        one.yy_font = [UIFont boldSystemFontOfSize:18];
+        one.yy_color = RGBAlpha(255, 255, 255, 1);
         
         YYTextShadow *shadow = [YYTextShadow new];
         shadow.color = [UIColor colorWithWhite:0.000 alpha:0.490];
@@ -144,6 +147,33 @@
         [text appendAttributedString:one];
         
     }
+    
+    {
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"you forever!"];
+        one.yy_font = [UIFont boldSystemFontOfSize:14];
+        one.yy_color = RGBAlpha(255, 255, 255, 0.5);
+        YYTextShadow *shadow = [YYTextShadow new];
+        shadow.color = [UIColor colorWithWhite:0.000 alpha:0.490];
+        shadow.offset = CGSizeMake(0, 1);
+        shadow.radius = 5;
+        one.yy_textShadow = shadow;
+        [text appendAttributedString:one];
+        [text appendAttributedString:[self padding]];
+    }
+    {
+        NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:@"but do you know \"love\" can be clicked."];
+        one.yy_font = [UIFont boldSystemFontOfSize:14];
+        one.yy_color = RGBAlpha(255, 255, 255, 0.5);
+        YYTextShadow *shadow = [YYTextShadow new];
+        shadow.color = [UIColor colorWithWhite:0.000 alpha:0.490];
+        shadow.offset = CGSizeMake(0, 1);
+        shadow.radius = 5;
+        one.yy_textShadow = shadow;
+        [text appendAttributedString:one];
+        [text appendAttributedString:[self padding]];
+    }
+    
+    
     
     return text;
 }

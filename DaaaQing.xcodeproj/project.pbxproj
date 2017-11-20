@@ -37,6 +37,7 @@
 		3C5833801FB595DD0037B600 /* EmoticonQQ.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C58337F1FB595DD0037B600 /* EmoticonQQ.bundle */; };
 		3C5833821FB59EB10037B600 /* dq_22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C5833811FB59EB10037B600 /* dq_22.jpg */; };
 		3C5833841FB59EBD0037B600 /* dq_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C5833831FB59EBD0037B600 /* dq_4.jpg */; };
+		3C5833861FB849940037B600 /* STXINGKA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C5833851FB849940037B600 /* STXINGKA.ttf */; };
 		6C06EB451F98476600D27D1E /* back_Image_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C06EB3F1F98476600D27D1E /* back_Image_icon@2x.png */; };
 		6C06EB461F98476600D27D1E /* back_Image_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C06EB401F98476600D27D1E /* back_Image_icon@3x.png */; };
 		6C06EB471F98476600D27D1E /* GSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C06EB421F98476600D27D1E /* GSNavigationController.m */; };
@@ -104,6 +105,7 @@
 		3C58337F1FB595DD0037B600 /* EmoticonQQ.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EmoticonQQ.bundle; sourceTree = "<group>"; };
 		3C5833811FB59EB10037B600 /* dq_22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dq_22.jpg; sourceTree = "<group>"; };
 		3C5833831FB59EBD0037B600 /* dq_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dq_4.jpg; sourceTree = "<group>"; };
+		3C5833851FB849940037B600 /* STXINGKA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = STXINGKA.ttf; sourceTree = "<group>"; };
 		6C06EB3F1F98476600D27D1E /* back_Image_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_Image_icon@2x.png"; sourceTree = "<group>"; };
 		6C06EB401F98476600D27D1E /* back_Image_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_Image_icon@3x.png"; sourceTree = "<group>"; };
 		6C06EB411F98476600D27D1E /* GSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSNavigationController.h; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 		6C7CFA4A1F972DEF00C4163F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C5833851FB849940037B600 /* STXINGKA.ttf */,
 				3C58337E1FB595BA0037B600 /* Emotion */,
 				6C5272FF1FB180DE007A4473 /* ImageSource */,
 				6C06EB651F9884FA00D27D1E /* Musics */,
@@ -596,6 +599,7 @@
 				3C58336C1FB58AC20037B600 /* dq_7.jpg in Resources */,
 				3C5833431FB546740037B600 /* GSDiaryCollectionViewCell.xib in Resources */,
 				3C58336D1FB58AC20037B600 /* dq_8.jpg in Resources */,
+				3C5833861FB849940037B600 /* STXINGKA.ttf in Resources */,
 				3C58337A1FB58AC20037B600 /* dq_21.jpg in Resources */,
 				3C5833721FB58AC20037B600 /* dq_13.jpg in Resources */,
 				6C06EB671F98850600D27D1E /* birthday.mp3 in Resources */,

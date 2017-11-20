@@ -78,5 +78,6 @@
 
 /** fontName */
 #define kCoolFontName @"BradleyHandITCTT-Bold"
+#define kXingKaiFontName @"STXingkai" //@"STXingkaiSC-Light"
 
 #endif /* MacroDefinition_h */

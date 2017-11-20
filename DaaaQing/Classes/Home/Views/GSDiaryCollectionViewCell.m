@@ -49,10 +49,37 @@
     _imageView.layer.masksToBounds = YES;
     
     
+
+    
     
     [self addSubview:self.numLabel];
     
-    _contentLabel.font = [UIFont fontWithName:kCoolFontName size:16];
+    CTFontDescriptorRef descRef = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)@{(NSString *)kCTFontNameAttribute: kXingKaiFontName});
+    NSArray *descs = @[(__bridge id)descRef];
+    
+    CTFontDescriptorMatchFontDescriptorsWithProgressHandler((CFArrayRef)descs, NULL, ^bool(CTFontDescriptorMatchingState state, CFDictionaryRef  _Nonnull progressParameter) {
+        
+        if (state == kCTFontDescriptorMatchingWillBeginDownloading) {
+            NSLog(@"开始下载");
+        } else if (state == kCTFontDescriptorMatchingDownloading) {
+            double progressValue = [[(__bridge NSDictionary *)progressParameter objectForKey:(id)kCTFontDescriptorMatchingPercentage] doubleValue];
+            NSLog(@"下载进度:%0.2lf",progressValue);
+        } else if (state == kCTFontDescriptorMatchingDidFinishDownloading) {
+            NSLog(@"下载完成");
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+//                self.label.font = [UIFont fontWithName:fontName size:12];
+            });
+        } else if (state == kCTFontDescriptorMatchingDidBegin) {
+            NSLog(@"开始");
+        }
+        
+        return YES;
+    });
+    
+
+    
+    
     
 }
 
@@ -76,6 +103,14 @@
     _numLabel.attributedText = [self attrbuteStringWithNum:numStr.integerValue];
     
     _numLabel.textAlignment = NSTextAlignmentCenter;
+    
+    char c = [diaryModel.content characterAtIndex:0];
+    if (c >= 'A' && c <= 'Z') {
+        _contentLabel.font = [UIFont fontWithName:kCoolFontName size:16];
+        
+    } else {
+        _contentLabel.font = [UIFont fontWithName:kXingKaiFontName size:16];
+    }
 }
 
 - (NSAttributedString *)attrbuteStringWithNum:(NSInteger)num

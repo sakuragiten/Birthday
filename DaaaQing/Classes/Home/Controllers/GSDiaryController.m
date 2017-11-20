@@ -70,14 +70,14 @@
 #pragma mark - UItableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = @[@"Memories for you.", @"Code for you.", @"Words for you.", @"Everything for you."][indexPath.row];
+    cell.textLabel.text = @[@"Memories about you.", @"Code for you.", @"Words for you.", @"Everything for you."][indexPath.row];
     cell.textLabel.font = [UIFont fontWithName:kCoolFontName size:16];
     cell.backgroundColor = [UIColor whiteColor];
     return cell;
