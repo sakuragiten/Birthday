@@ -66,6 +66,8 @@ SingletonImplementation(Tool)
     return [UIImage imageWithCGImage:scaledImage];
 }
 
+- 
+
 #pragma mark - 摇一摇切换环境 写在控制器里
 //- (void)shakeToChangeEnvironmentEnable:(BOOL)enable
 //{
