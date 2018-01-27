@@ -95,8 +95,10 @@
 
     [_contentLabel sizeToFit];
     
+    UIImage *image = [UIImage imageNamed:diaryModel.imageName];
+    if (!image) image = [UIImage imageNamed:@"dq_0.jpg"];
     
-    _imageView.image = [UIImage imageNamed:diaryModel.imageName];
+    _imageView.image = image;
     
     NSString *numStr = [diaryModel.imageName substringFromIndex:3];
     

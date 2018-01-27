@@ -25,7 +25,7 @@
     [self setupUI];
     
 
-//    [[GSAudioTool sharedAudioTool] playBirthSong];
+    [[GSAudioTool sharedAudioTool] playBirthSong];
   
 }
 
